@@ -1,0 +1,49 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* DEBUG */
+/* .logo,
+.input_field{
+    border: 1px solid red;
+} */
+
+
+/* header */
+header{
+    text-align: center;
+}
+.logo{
+    width:400px;
+    margin: 20px auto;
+}
+
+.logo img{
+    width:100%;
+    max-width: 400px;
+}
+
+.input_field input{
+    width: 400px;
+    border-radius: 10px;
+    padding:10px;
+}
+.input_field button{
+    padding:10px;
+    border-radius: 10px;
+}
+
+/* MAIN */
+.list_container{
+    border: 1px solid red;
+    height: 200px;
+    width: 400px;
+    margin:auto;
+    margin-top: 100px;
+    background-color: blue;
+}
+
+
+
