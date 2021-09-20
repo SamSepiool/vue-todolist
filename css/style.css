@@ -5,10 +5,7 @@
     box-sizing: border-box;
 }
 /* DEBUG */
-/* .logo,
-.input_field{
-    border: 1px solid red;
-} */
+
 
 
 /* header */
@@ -37,12 +34,23 @@ header{
 
 /* MAIN */
 .list_container{
-    border: 1px solid red;
-    height: 200px;
-    width: 400px;
+    width: 60%;
+    min-width: 500px;
+    padding: 15px;
     margin:auto;
     margin-top: 100px;
-    background-color: blue;
+    border-radius: 15px;
+    background-color: #eee;
+}
+
+.list_container ul{
+    list-style: none;
+}
+.list_container ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid grey;
 }
 
 
