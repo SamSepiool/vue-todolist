@@ -4,9 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* DEBUG */
-
-
+/* VUE */
+.done{
+    text-decoration: line-through;
+    color: green;
+}
 
 /* header */
 header{
@@ -51,6 +53,9 @@ header{
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid grey;
+}
+.list_container ul li{
+    cursor: pointer;
 }
 
 

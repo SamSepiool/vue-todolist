@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- FONTAWSOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>ToDo</title>
+        <title>ToDo-list</title>
     </head>
     <body>
 
@@ -19,21 +19,27 @@
                 </div>
                 
                 <div class="input_field">
-                    <input type="text" placeholder="Nuovo ToDo">
-                    <button>Aggiungi</button>
+                    <input v-model="newTodo" type="text" placeholder="Nuovo ToDo">
+                    <button @click='addTodo'>Aggiungi</button>
                 </div>
             </header>
 
             <main>
                 <div class="list_container">
 
-                    <ul>
-                        <li v-for='(task, index) in toDos'>{{toDos[index].task}}
-                            <div class="checkbox">
-                               <i class="fas fa-check"></i> <i class="fas fa-times"></i>
+                    <ul v-if='toDos.length > 0'>
+                        <li v-for='(task, index) in toDos' :key='index'>
+
+                            <div  :class="(toDos[index].done == true) ? 'done' : 'null'">
+                                {{toDos[index].task}}
                             </div>
+                            <div class="checkbox">
+                               <i class="fas fa-check"  @click='checkTodo(index)'></i> <i class="fas fa-times" @click='deleteTodo(index)'></i>
+                            </div>
+                            
                         </li>
                     </ul>
+                    <h2 v-else='Nessuna task da completare'></h2>
 
                 </div>
             </main>
